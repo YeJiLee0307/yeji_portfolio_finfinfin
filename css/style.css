@@ -1,0 +1,256 @@
+@charset "utf-8";
+/*전체 스타일 초기화*/
+* { 
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+ul,ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+/*header*/
+header {
+	width: 100%;
+	border-bottom: 1px solid #be652d;
+}
+header .inner {
+	width: 1180px;
+	height: 120px;
+	margin: 0px auto;
+	position: relative; /*자식요소 기준점 설정*/
+}
+header .inner h1 {
+	position: absolute;
+	left: 0px;
+	bottom: 15px;
+
+
+}
+
+header .inner h1 a {
+	/*축약형 풀어쓰면 
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 1;
+	font-family: "arial"; 이거임 */
+	font: bold 24px/1 "arial";
+	color: #be652d;
+}
+/*유틸 메뉴*/
+header .inner .util {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+}
+header .inner .util li {
+	float: left;
+}
+
+header .inner .util li a {
+	display: block;
+	font: 12px/1 "arial" ;
+	color: #999;
+	padding: 0px 10px;
+}
+
+/*전역 이동 메뉴막대*/
+header .inner #gnb {
+	position: absolute;
+	bottom: 0px;
+	right: 0px
+}
+header .inner #gnb li {
+	float: left;
+}
+header .inner #gnb li a{
+	display: block;
+	font: bold 15px/1 "arial";
+	color: #555;
+	padding: 20px 40px;
+	transition: all 0.5s;
+
+}
+header .inner #gnb li a:hover {
+	background: #be652d;
+	color: #040303
+}
+
+/*figure영역의 크기를 설정 visual */
+figure {
+	width: 100%;
+	height: calc(100vh - 120px); /*전체 브라우저 높이에서 120px만큼 빼주기*/
+	background: #000000;
+	position: relative;
+	overflow: hidden;
+	padding-top: 250px;
+}
+
+figure video {
+	object-fit: cover; /*영상을 figure안에 꽉 차도록 설정해줌*/
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+/*inner안에 제목, 본문, 하단 링크스타일 설정*/
+/*line-height값을 높잇값과 똑같이 지정하면 해당 버튼 영역 안에서 글자를 세로 가운데 배치 가능*/
+figure .inner {
+	width: 1180px;
+	margin: 0px auto;
+	position: relative;
+}
+figure .inner h1 {
+	font: normal 120px/1 "arial";
+	color: #fff;
+	margin-bottom: 20px;
+}
+figure .inner p {
+	font:16px / 1.4 "arial" ;
+	color: #888;
+	margin-bottom: 60px;
+}
+figure .inner a {
+	display: block;
+	width: 400px;
+	height: 30px;
+	border: 1px solid #bbb;
+	font: bold 11px/30px "arial" ;
+	color : #fff;
+	text-align: center;
+	letter-spacing: 1px;
+	transition: all 0.5s;
+
+}
+figure .inner a:hover {
+	background: #fff;
+	color: #555;
+}
+
+/*my artworks_news*/
+section {
+	width: 100%;
+	padding: 200px 0px;
+}
+section .inner {
+	width: 1180px;
+	margin: 0px auto;
+}
+section .inner h1 {
+	font: bold 24px/1 "arial";
+	color: #580c92;
+	text-align: center;
+	margin-bottom: 50px;
+}
+section .inner .wrap {
+	width: 100%;
+}
+section .inner .wrap::after { /*자식 요소인 article의 float 해제; 여기서 float해제란?float 해제"는 요소가 float 속성을 사용해서 배치된 이후, 그로 인해 영향을 받는 다른 요소들의 레이아웃 문제를 해결하기 위한 방법을 의미*/
+	content: "";
+	display: block;
+	clear: both;
+}
+section .inner .wrap article {
+	width: 280px;
+	float: left;
+	margin-right: 20px;
+}
+section .inner .wrap article:last-child { /*맨 오른쪽 마지막 요소의 여백만 제거*/
+	margin-right: 0px;
+}
+section .inner .wrap article h2 {
+	margin-bottom: 10px;
+}
+section .inner .wrap article h2 a {
+	font: bold 16px/1 "arial";
+	color: #555;
+}
+section .inner .wrap article .pic {
+	font: 14px/1.4 "arial";
+	color: #777;
+}
+
+section .inner .wrap article .pic {
+	width: 100%;
+	height: 120px;
+	background: #eb1212;
+	margin-bottom: 15px;
+	position: relative;
+	overflow: hidden;
+}
+section .inner .wrap article .pic img {
+	object-fit: cover; /*프레임 안에 이미지를 꽉 채우기 위한 코드임*/
+	width: 100%;
+	height: 100%;
+}
+
+/*footer*/
+footer {
+	width: 100%;
+	background: #333;
+	padding: 100px 0px;
+	border-top: 1px solid #888;
+
+}
+footer .inner {
+	width: 1180px;
+	margin: 0px auto;
+}
+footer .inner .upper {
+	width: 100%;
+	border-bottom: 1px solid #777;
+	padding-bottom: 20px;
+	
+}
+footer .inner .upper::after { /* 상단 영역 float 해제 */
+	content: "";
+	display: block;
+	clear: both;
+}
+footer .inner .upper ul {
+	float: right;
+}
+footer .inner .upper ul li {
+	float: left;
+	margin-left: 20px
+}
+footer .inner .upper ul li a {
+	font: bold 14px/1 "arial";
+	color: #666;
+}
+footer .inner .lower {
+	width: 100%;
+	padding-top: 20px;
+}
+footer .inner .lower address{
+	width: 100%;
+	font: 12px/1.3 "arial";
+	color: #777;
+	margin-bottom: 20px;
+}
+footer .inner .loewer p {
+	width: 100%;
+	font: 12px/1 "arial";
+	color: #777;
+}
+body {
+    background-color: #0c0a08; /* 배경 색상 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,176 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+body {
+	background-color: rgb(27, 26, 23);
+}
+/*
+section {
+	width: 340px;
+	padding: 30px;
+	background-color: #94b4aa;
+	margin: 50px auto;
+	box-shadow: 10px 10px 30px rgba(29, 31, 30, 0.1);
+	border-radius: 10px;
+} */
+/* 291페이지 */
+section nav.menu {
+	width: 100%;
+}
+section nav.menu::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+section nav.menu a {
+	font-size: 20px;
+	color:rgb(199, 245, 255)
+}
+section nav.menu a :nth-of-type(1) {
+	float: left;
+}
+section nav.menu a:nth-of-type(2) {
+	float: right;
+}
+
+/*gerbera*/
+section article.profile {
+	width: 100%;
+	text-align: center;
+}
+section article.profile img {
+    width: 500px;  /* 가로 크기 */
+    height: 500px; /* 세로 크기 - 가로와 동일 */
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 5px 15px 30px rgb(255, 123, 0);
+    margin-left: 600px; /* 이미지를 오른쪽으로 이동 */
+    object-fit: cover;  /* 이미지가 정사각형 안에 맞게 잘리도록 */
+	margin-top: 170px;
+}
+/* 부모 요소의 스타일 */
+section article.profile {
+    width: 100%;
+    text-align: center;
+    position: relative; /* 필요 시 텍스트나 다른 요소들의 기준을 잡을 때만 사용 */
+}
+
+/* h1과 h2 스타일 정의 */
+section article.profile h1 {
+    font-weight: bold;
+    font-size: 40px;
+    font-family: "arial";
+    line-height: 1;
+    color: #ff8400;
+    margin-bottom: 5px;
+    text-align: center;
+	text-align: left; /* 왼쪽 정렬 */
+	margin-left: 100px;
+	
+}
+
+section article.profile h2 {
+    font-weight: normal;
+    font-size: 20px;
+    font-family: "arial";
+    color: #edb28b;
+    text-align: center;
+    margin-top: 10px; /* h1과의 간격 조정 */
+	text-align: left; /* 왼쪽 정렬 */
+	margin-left: 100px;
+}
+section article p {
+    text-indent: 30px; /* 각 문단의 첫 줄을 30픽셀 들여쓰기 */
+}
+
+
+
+/*return칸*/
+section a.btnView {
+	display: block;
+	width: 180px;
+	height: 32px;
+	margin: 0px auto 50px; /* 기존 20px에서 50px로 변경하여 더 아래로 */
+	background-color: #444;
+	border-radius: 16px;
+	font-weight: bold;
+	font-size: 10px;
+	font-family: "arial";
+	color: rgb(27, 26, 23);
+	line-height: 32px;
+	text-align: center;
+	background: linear-gradient(45deg, #ff8400, #ff8400);
+	box-shadow: 5px 10px 20px rgba(193, 174, 161, 0.493);
+    margin-top: 100px;
+
+}
+
+/*연락처 목록*/
+section ul.contect {
+	margin-bottom: 25px;
+}
+section ul.contect {
+	width: 100%;
+	padding: 10px 0px;
+	border-bottom: 1px solid #eee;
+
+}
+
+section ul.contect li:last-child {
+	border-bottom: none;
+}
+
+section ul.contect li i {
+	width: 20%;
+	text-align: center;
+	color: #555;
+	font-size: 15px;
+	text-shadow: 2px 2px 2px #ddd;
+}
+section ul.contect li span {
+	font-weight: normal;
+	font-size: 11px;
+	font-family: "orbitron";
+	color: #555;
+	letter-spacing: 1px;
+}
+/* h3 스타일 수정 */
+section article.profile h3 {
+    font-weight: bold;
+    font-size: 40px;
+    font-family: "arial";
+    line-height: 1;
+    color: #ff8400;
+    margin-bottom: 60px; /* 아래 여백을 늘려 h3와 동영상 간격 확보 */
+    text-align: left; /* 왼쪽 정렬 */
+    margin-left: 0; /* 왼쪽 여백을 제거합니다. */
+    position: absolute; /* 절대 위치 설정 */
+    top: 20px; /* 위쪽으로 조정 */
+    left: 20px; /* 원하는 만큼 왼쪽으로 조정 */
+    
+    writing-mode: vertical-rl; /* 텍스트를 세로로 배치 */
+  
+}
+
+/* 동영상 스타일 */
+section article.profile img {
+    width: 80%; /* 동영상 가로 크기 */
+    height: auto; /* 비율을 유지하며 높이를 자동으로 설정 */
+    display: block; /* block 요소로 설정해 중앙 정렬 가능 */
+    margin: 0 auto; /* 중앙 정렬 */
+    border-radius: 10px;
+    box-shadow: 5px 10px 20px rgb(255, 123, 0);
+    margin-top: 20px; /* 동영상 위쪽 여백 추가 */
+}
